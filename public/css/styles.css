@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
 }
 body {
   min-height: 100vh;
@@ -958,6 +959,7 @@ h6 span {
   width: 100%;
   min-height: 5vh;
   position: fixed;
+  top: 0;
 }
 .Land-container .Land-header .user .account-pic {
   position: flex;
@@ -1019,25 +1021,25 @@ h6 span {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   z-index: 99;
 }
-#section1 {
-  height: 700px;
+#home {
+  height: 90vh;
   background: url("../../img/Hillster.png");
-  display: inline-block;
+  background-size: cover;
   width: 100%;
 }
-#section2 {
+#services {
   height: 700px;
   background: #0ca6ff;
   display: inline-block;
   width: 100%;
 }
-#section3 {
+#about {
   height: 700px;
   background: white;
   display: inline-block;
   width: 100%;
 }
-#section4 {
+#contact {
   height: 700px;
   background: #0ca6ff;
   display: inline-block;
@@ -1046,9 +1048,10 @@ h6 span {
 
 .land-content {
   width: 900px;
-  height: 100vh;
+  height: 100%;
   margin: 80px;
 }
+
 .land-content h1 {
   color: #000000;
   padding-top: 10px;

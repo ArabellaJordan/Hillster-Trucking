@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="CustomerStyle.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>Home</title>
+</head>
+
+<body>
+    <div class="side-menu">
+        <div class="brand-name">
+            <img src="Logo.png" class="logo">
+        </div>
+
+        <div class="menu">
+            <div class="item"><a href="StaffDB.php"><img src="dashboard.png" alt="">&nbsp; DashBoard</a></div>
+            <div class="item"><a class="sub-btn"><img src="Booking.png" alt="">&nbsp; Bookings
+                    <i class="fas fa-angle-right dropdown"></i>
+                </a>
+                <div class="sub-menu">
+                    <ul>
+                        <li><a href="Transaction.php" class="sub-item"><span>Transaction</span></a></li>
+                        <li><a href="AddTransaction.php" class="sub-item"><span>Add Transaction</span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="item"><a class="sub-btn"><img src="truck.png" alt="">&nbsp; Vehicle
+                    <i class="fas fa-angle-right dropdown"></i>
+                </a>
+                <div class="sub-menu">
+                    <ul>
+                        <li><a href="Trucks.php" class="sub-item">Trucks</a></li>
+                        <li><a href="Tracking.php" class="sub-item">Tracking</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="item"><a class="sub-btn"><img src="message.png" alt="">&nbsp; Messages
+                    <i class="fas fa-angle-right dropdown"></i>
+                </a>
+                <div class="sub-menu">
+                    <ul>
+                        <li><a href="DriverMess.php" class="sub-item">Drivers</a></li>
+                        <li><a href="CustomerMess.php" class="sub-item">Customer</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="item"><a href="Directory.php"><img src="Employee.png">&nbsp; Directory</a></div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="header">
+            <div class="nav">
+                <div class="search">
+                    <input type="text" placeholder="Search..">
+                    <button> <img src="search.png" alt=""></button>
+                </div>
+                <div class="user">
+                    <div class="notification"><a href="StaffNotification.php"><img src="notification.png" alt=""></a>
+                    </div>
+                    <div class="account-pic"><img src="Employee.png" onclick="toggleAccMenu()">
+                        <div class="acc-menu" id="accMenu">
+                            <div class="acc-sub-menu">
+                                <ul>
+                                    <li><img src="" alt="">
+                                        <h3> UserName</h3>
+                                    </li>
+                                    <li><img src="" alt=""><a href="AdminSetting.php" class="sub-item">Settings</a></li>
+                                    <li><img src="" alt=""><a href="Landing-Page.php" class="sub-item">Log Out</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="add-transaction-table">
+        <div class="add-transaction-table2">
+
+            <div class="addNumTruck">
+                <h3>Truck need: </h3><input type="text" placeholder="Enter Number of Truck">
+            </div>
+            <div class="addDate">
+                <h3>Date: </h3><input type="text" placeholder="Enter Date">
+            </div>
+            <div class="addTime">
+                <h3>Time: </h3><input type="text" placeholder="Enter Time">
+            </div>
+            <div class="addLocation">
+                <h3>Location: </h3>
+            </div>
+
+
+            <h3>Location</h3>
+            <div class="addStreet">
+                <h3>Str/Blk/Lot: </h3><input type="text" placeholder="Enter Street/Blk/Lot">
+            </div>
+            <div class="addBaranggay">
+                <h3>Baranggay: </h3><input type="text" placeholder="Enter Baranggay">
+            </div>
+            <div class="addCity">
+                <h3>City: </h3><input type="text" placeholder="Enter City">
+            </div>
+            <div class="addProvince">
+                <h3>Province: </h3><input type="text" placeholder="Enter Province">
+            </div>
+            <div class="CusAssign">
+                <a href="#" class="SaveBtn">Add Transaction</a>
+            </div>
+
+
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        let accMenu = document.getElementById("accMenu");
+        function toggleAccMenu() {
+            accMenu.classList.toggle("open-acc-menu");
+        }
+
+        let bookMenu = document.getElementById("bookMenu");
+        function toggleBookMenu() {
+            bookMenu.classList.toggle("open-book-menu");
+        }
+    </script>
+</body>
+
+</html>

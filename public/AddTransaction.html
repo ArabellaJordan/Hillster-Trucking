@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="AdminStyle.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>Admin Transaction</title>
+</head>
+<body>
+    <div class="side-menu">
+        <div class="brand-name">
+            <img src="Logo.png" class="logo">
+        </div>
+       
+        <div class="menu">
+            <div class="item"><a href="StaffDB.php"><img src="dashboard.png" alt="">&nbsp; DashBoard</a></div>
+            <div class="item"><a class="sub-btn"><img src="Booking.png" alt="">&nbsp; Bookings
+                <i class="fas fa-angle-right dropdown"></i>
+            </a>
+                <div class="sub-menu">
+                    <ul>
+                    <li><a href="Transaction.php" class="sub-item"><span>Transaction</span></a></li>
+                    <li><a href="AddTransaction.php" class="sub-item"><span>Add Transaction</span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="item"><a class="sub-btn"><img src="truck.png" alt="">&nbsp; Vehicle
+                <i class="fas fa-angle-right dropdown"></i>
+            </a>
+                <div class="sub-menu">
+                <ul>
+                <li><a href="Trucks.php" class="sub-item">Trucks</a></li>
+                <li><a href="Tracking.php" class="sub-item">Tracking</a></li>
+                </ul>
+                </div>
+            </div>
+            <div class="item"><a class="sub-btn"><img src="message.png" alt="">&nbsp; Messages
+                <i class="fas fa-angle-right dropdown"></i>
+            </a>
+                <div class="sub-menu">
+                <ul>
+                <li><a href="DriverMess.php" class="sub-item">Drivers</a></li>
+                <li><a href="CustomerMess.php" class="sub-item">Customer</a></li>
+                </ul>
+                </div>
+            </div>
+            <div class="item"><a href="Directory.php"><img src="Employee.png">&nbsp; Directory</a></div>
+        </div>
+    </div>
+    
+
+<div class="container">
+    <div class="header">
+        <div class="nav">
+            <div class="search">
+                <input type="text" placeholder="Search..">
+                 <button> <img src="search.png" alt=""></button>
+            </div>
+            <div class="user">
+                <div class="notification"><a href="StaffNotification.php"><img src="notification.png" alt=""></a></div>
+                <div class="account-pic"><img src="Employee.png" onclick="toggleAccMenu()">
+                <div class="acc-menu" id="accMenu">
+                <div class="acc-sub-menu">
+                    <ul>
+                    <li><img src="" alt=""> <h3> UserName</h3></li>
+                    <li><img src="" alt=""><a href="AdminSetting.php" class="sub-item">Settings</a></li>
+                    <li><img src="" alt=""><a href="Landing-Page.php" class="sub-item">Log Out</a></li>
+                    </ul>
+                </div>   
+                </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="add-transaction-table">
+            <section class="add-transaction-header">
+                <h1>Transaction</h1>
+            </section>
+        </div>
+        <div class="add-transaction-table2">
+           <div class="transLeft">
+                <div class="addName">
+                    <h3>Full Name: </h3><input type="text" placeholder="Enter Name...">
+                </div>
+                <div class="addAffiliation">
+                    <h3>Company Affiliation:</h3><input type="text" placeholder="Enter Affliliation...">
+                </div>
+                <div class="addContact">
+                    <h3>Phone Number:</h3><input type="text" placeholder="Enter Phone Number...">
+                </div>
+                <div class="addEmail">
+                    <h3>Email: </h3><input type="text" placeholder="Enter Email...">
+                </div>
+                <div class="addDate">
+                    <h3>Date: </h3><input type="text" placeholder="Enter Date">
+                </div>
+                <div class="addTime">
+                    <h3>Time: </h3><input type="text" placeholder="Enter Time">
+                </div>
+                <div class="addLocation">
+                    <h3>Location: </h3><input type="text" placeholder="Enter Location">
+                </div>
+            </div>
+            <div class="transRight">
+                <div class="assign">
+                <a href="#" class="DvBtn">Add Driver</a>
+                <a href="#" class="HpBtn">Add Helper</a>
+                </div>
+                <div class="assign_table">
+                    <table id="assign-table">
+                        <thead>
+                            <tr>
+                              <th scope="col">Driver</th>
+                              <th scope="col">Helper</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="assign">
+                <a href="#" class="SaveBtn">Add Transaction</a>
+                </div>       
+                </div>
+            </div>
+        </div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('.sub-btn').click(function(){
+            $(this).next('.sub-menu').slideToggle();
+            $(this).find('.dropdown').toggleClass('rotate');
+        });
+    })
+
+    let accMenu = document.getElementById("accMenu");
+    function toggleAccMenu(){
+        accMenu.classList.toggle("open-acc-menu");
+    }
+</script>
+</body>
+</html>

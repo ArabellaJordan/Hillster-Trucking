@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Hillster-Trucking-Service-Admin-Portal" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="CustomerStyle.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>Message</title>
+</head>
+<div class="Land-container">
+			<div class="Land-header">
+				<nav>
+					<img src="Logo.png" class="Logo">
+					<ul>
+						<li><a href="Customer-page.php">Home</a></li>
+					</ul>
+                    <div class="user">
+                        <div class="booking-pic"><img src="Booking.png" onclick="toggleBookMenu()">
+                            <div class="book-menu" id="bookMenu">
+                                <div class="book-sub-menu">
+                                    <ul>
+                                    <li><a href="CSTrans.php" class="sub-item">Transaction</a></li>
+                                    <li><a href="CSAddTrans.php" class="sub-item">Add Transactiont</a></li>
+                                    </ul>
+                                </div>   
+                            </div>
+                        </div>
+                        <div class="message-pic"> <a href="CSMess.php"><img src="Message.png"></a></div>
+                        <div class="account-pic"><img src="Employee.png" onclick="toggleAccMenu()">
+                        <div class="acc-menu" id="accMenu">
+                        <div class="acc-sub-menu">
+                            <ul>
+                            <li><img src="" alt=""> <h3> UserName</h3></li>
+                            <li><a href="CSSetting.php" class="sub-item">Settings</a></li>
+                            <li><a href="" class="sub-item">Log Out</a></li>
+                            </ul>
+                        </div>   
+                        </div>
+                        </div>
+                    </div>
+				</nav>
+			</div>    
+        
+        <div class="land-content">
+        <div class="CusMess-container">
+           <div class="leftSide">
+            <div class="mess-header">
+                <h3>Messages</h3>
+            </div>
+                <div class="search-chat">
+                    <input type="text" placeholder="Search...">
+                </div>
+            <div class="chatList">
+
+            </div>
+           </div>
+           <div class="rightSide">
+            <div class="mess-header">
+
+            </div>
+            <div class="chatBox">
+
+            </div>
+            <div class="chatBox-input">
+                <input type="text" placeholder="Type Message...">
+            
+        </div>
+           </div>
+        </div>
+        </div>
+</div>
+        </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+      let accMenu = document.getElementById("accMenu");
+    function toggleAccMenu(){
+        accMenu.classList.toggle("open-acc-menu");
+    }
+
+    let bookMenu = document.getElementById("bookMenu");
+    function toggleBookMenu(){
+        bookMenu.classList.toggle("open-book-menu");
+    }
+</script>
+</body>
+</html>

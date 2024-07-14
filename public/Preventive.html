@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Hillster-Trucking-Service-Admin-Portal" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="DriverStyle.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>Preventive Maintenance</title>
+</head>
+<body>
+    <div class="side-menu">
+        <div class="brand-name">
+        <img src="Logo.png" class="logo">
+        </div>
+       
+        <div class="menu">
+            <div class="item"><a href="#"><img src="" alt="">&nbsp; Status</a></div>
+            <div class="item"><a href="DriverDB.php"><img src="dashboard.png" alt="">&nbsp; DashBoard</a></div>
+            <div class="item"><a href="DVTrans.php"><img src="Booking.png" alt="">&nbsp; Transaction</a>  </div>
+            <div class="item"><a class="sub-btn"><img src="truck.png" alt="">&nbsp; Vehicle
+                <i class="fas fa-angle-right dropdown"></i>
+            </a>
+                <div class="sub-menu">
+                <ul>
+                <li><a href="Preventive.php" class="sub-item">Maintenance</a></li>
+                <li><a href="Expenses.php" class="sub-item">Expenses</a></li>
+                <li><a href="DVTracking.php" class="sub-item">Tracking</a></li>
+                </ul>
+                </div>
+            </div>
+            <d class="item"><a href="DVAdminMess.php" class="sub-item"><img src="message.png" alt="">&nbsp; Messages</a></div>
+        </div>
+
+
+<div class="container">
+    <div class="header">
+        <div class="nav">
+            <div class="search">
+                <input type="text" placeholder="Search..">
+                <button> <img src="search.png" alt=""></button>
+            </div>
+            <div class="user">
+                <div class="notification"><a href="DVNotification.php"><img src="notification.png" alt=""></a></div>
+                <div class="account-pic"><img src="Employee.png" onclick="toggleAccMenu()">
+                <div class="acc-menu" id="accMenu">
+                <div class="acc-sub-menu">
+                    <ul>
+                    <li><img src="" alt=""> <h3> UserName</h3></li>
+                    <li><img src="" alt=""><a href="DriverSetting.php" class="sub-item">Settings</a></li>
+                    <li><img src="" alt=""><a href="" class="sub-item">Log Out</a></li>
+                    </ul>
+                </div>   
+                </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="customer-table">
+            <section class="table-header">
+                <h1>Preventive Maintenance</h1>
+                <div class="input-detail">
+                    <input type="search" placeholder="Search Data...">
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('.sub-btn').click(function(){
+            $(this).next('.sub-menu').slideToggle();
+            $(this).find('.dropdown').toggleClass('rotate');
+        });
+    })
+
+    let accMenu = document.getElementById("accMenu");
+    function toggleAccMenu(){
+        accMenu.classList.toggle("open-acc-menu");
+    }
+</script>
+</body>
+</html>
