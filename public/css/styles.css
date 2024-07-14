@@ -1026,9 +1026,10 @@ h6 span {
   background: url("../../img/Hillster.png");
   background-size: cover;
   width: 100%;
+  margin-top: 80px;
 }
 #services {
-  height: 700px;
+  height: 600px;
   background: #0ca6ff;
   display: inline-block;
   width: 100%;
@@ -1049,7 +1050,17 @@ h6 span {
 .land-content {
   width: 900px;
   height: 100%;
-  margin: 80px;
+  margin: auto;
+  
+}
+#services .land-content {
+  display: flex;
+  flex-direction: column;
+  width: 900px;
+  height: 100%;
+  margin: auto;
+  text-align: center;
+  
 }
 
 .land-content h1 {
@@ -1081,4 +1092,20 @@ h6 span {
   font-size: 16px;
   letter-spacing: 1px;
   font-weight: 400;
+}
+
+.land-content ul{
+  display: flex;
+  gap: 5rem;
+  justify-content: center;
+  margin: 3rem;
+}
+#about .land-content p {
+  color: #000000;
+  line-height: 20px;
+  margin-top: 10px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  font-weight: 400;
+  text-align: center;
 }
