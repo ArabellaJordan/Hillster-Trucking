@@ -1,6 +1,7 @@
 import express from "express";
 import { dirname } from "path";
 import { fileURLToPath } from "url";
+import $ from 'jquery';
 
 const app = express();
 const port = 3000;
